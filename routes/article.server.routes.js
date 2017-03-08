@@ -2,8 +2,10 @@ module.exports = function(app){
 
  var articles = require('./../controllers/articles.server.controller.js');
  var users = require('./../controllers/users.server.controller.js');
+app.route('/listView')
+//.get(articles.listView);
+ //app.route('/api/articles')
 
- app.route('/api/articles')
 	.get(articles.list)
 	.post(users.requiresLogin, articles.create);
 
