@@ -7,6 +7,7 @@ mongoose.connection.dropDatabase(error => {
   console.log('Error', error);
   //process.exit(0);
 });
+
 var user = {
     email: 'abc@def.com',
     password: '12345678',
