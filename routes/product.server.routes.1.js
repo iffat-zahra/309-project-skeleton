@@ -1,21 +1,21 @@
 module.exports = function(app){
 
- var articles = require('./../controllers/articles.server.controller.js');
+ var product = require('./../controllers/articles.server.controller.js');
  var users = require('./../controllers/users.server.controller.js');
 app.route('/listView')
-//.get(articles.listView);
- //app.route('/api/articles')
+//.get(product.listView);
+ //app.route('/api/product')
 
-	.get(articles.list)
-	.post(users.requiresLogin, articles.create);
+	.get(product.list)
+	.post(users.requiresLogin, product.create);
 
-  app.route('/api/articles/:articleId')
-	.get(articles.read)
-  .delete(users.requiresLogin, articles.delete);
+  app.route('/api/product/:articleId')
+	.get(product.read)
+  .delete(users.requiresLogin, product.delete);
 
-	app.route('/api/articles/edit/:articleId')
-	.get(articles.read)
-	.put(users.requiresLogin, articles.update);
+	app.route('/api/product/edit/:productId')
+	.get(product.read)
+	.put(users.requiresLogin, product.update);
 
 
 app.param('articleId', articles.articleByID);

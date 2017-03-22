@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
 
-    <title>New Product</title>
+    <title>All Product</title>
 
     <!-- General META -->
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <h2>Create New Product</h2>
+    <h2>Create All Product</h2>
     <div class="form-horizontal">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Name</label>
@@ -52,33 +52,5 @@
   <script src="/vendor/ejs_production.js"></script>
   <script>
   </script>
-  var product ={
-  name: "",
-  descrption:"",
-  price: null,
-  quantity: null
-  };
-  $('#name').change(function()};
-  product.name=$('#name').val();
-  });
-  };
-  $('#description').change(function()};
-  product.description=$('#description').val();
-  });
-  };
-  $('#name').change(function()};
-  product.name=$('#name').val();
-  });
-$('#submit').click(function(){
-$.ajax({
-method:"POST",
-url:'/api/products',
-data: product
-}).done(function(response){
-console.log(respomse);
-}).fail(function(response){
-console.log(response);
-});
-});
-</script>
+
 </html>
